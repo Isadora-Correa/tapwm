@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>IAs mais conhecidas</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Conceitos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Ética na IA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#referencias">Fontes</a>
+                </li>
+            </ul>
+
+            <button href="#menu" class="btn-default"><a href="#menu">
+                Saiba mais
+            </a></button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars" style="color: #E90074;"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Conceitos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Ética na IA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#referencias">Fontes</a>
+                </li>
+            </ul>
+
+            <button href="#menu" class="btn-default"><a class="mais" href="#menu">
+                Saiba mais
+            </a></button>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    O futuro da tecnologia
+                    <span>está aqui!</span>
+                </h1>
+
+                <p class="description">
+                    Além da imaginação: A Inteligência 
+                    Artificial que você precisa conhecer.
+                </p>
+
+                <div class="social-media-buttons">
+                    <a href="https://api.whatsapp.com/send/?phone=%2B5515991123753&text&type=phone_number&app_absent=0">
+                        <i class="fa-brands fa-whatsapp" style="color: #E90074;"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/isadora_socialmedia/">
+                        <i class="fa-brands fa-instagram" style="color: #E90074;"></i>
+                    </a>
+
+                    <a href="https://linkedin.com/in/IsadoraCorrea">
+                        <i class="fa-brands fa-linkedin" style="color: #E90074;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="src/images/hero.png" alt="">
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">Conceitos sobre IA</h2>
+            <h3 class="section-subtitle">Você conhece todas?</h3>
+            <p class="description">
+                A Inteligência Artificial (IA) é um ramo da ciência da computação 
+                que busca desenvolver sistemas capazes de simular a inteligência  
+                humana, permitindo que máquinas realizem tarefas complexas como 
+                aprendizado, raciocínio e tomada de decisões. Através de algoritmos e 
+                modelos matemáticos, a IA capacita máquinas a aprenderem com dados, 
+                reconhecerem padrões e melhorarem seu desempenho ao longo do tempo, 
+                abrangendo áreas como aprendizado supervisionado, não supervisionado e 
+                por reforço. Presente em diversas aplicações cotidianas, desde assistentes 
+                virtuais até carros autônomos, a IA tem o potencial de revolucionar 
+                setores como medicina, finanças e transporte, impactando a sociedade 
+                de maneiras ainda não totalmente exploradas.
+            </p>
+
+            <div id="desafios">
+                <div class="desafio">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="src/images/chatgpt.png" class="dish-image" alt="">
+                    <h3 class="dish-title">
+                        ChatGPT
+                    </h3>
+                    <span class="dish-description">
+                        ChatGPT: O futuro da conversa está aqui. Descubra como a IA pode transformar a sua comunicação.
+                    </span>
+                    <div class="dish-price">
+                        <button class="btn-default" onclick="openModal('modal-container-chatgpt')">
+                            Clique aqui
+                        </button>
+                    </div>  
+                </div>
+                <div id="modal-container-chatgpt" class="modal-container">
+                    <div class="modal">
+                        <button class="fechar" id="fechar">X</button>
+                        <h2>ChatGPT – Inteligência Artificial para Conversação</h2>  
+                        <p>O ChatGPT é um modelo de inteligência artificial desenvolvido pela OpenAI, projetado para gerar respostas naturais e coerentes em conversas com os usuários. Baseado na arquitetura de redes neurais transformers, ele utiliza grandes quantidades de dados para compreender e produzir textos de alta qualidade.</p> 
+                        <h2>Principais Recursos do ChatGPT</h2> 
+                        <ul>  
+                          <li><strong>Processamento de Linguagem Natural:</strong> Capaz de entender e gerar textos de forma fluida, respondendo perguntas e interagindo de maneira natural.</li>  
+                          <li><strong>Geração de Conteúdo:</strong> Auxilia na criação de textos para blogs, roteiros, artigos, descrições de produtos e muito mais.</li>  
+                          <li><strong>Assistência na Programação:</strong> Suporte para diversas linguagens de programação, ajudando na escrita, correção e otimização de códigos.</li>  
+                          <li><strong>Tradução de Idiomas:</strong> Consegue traduzir textos para diferentes línguas, facilitando a comunicação global.</li>  
+                          <li><strong>Resolução de Problemas e Análises:</strong> Fornece explicações e sugestões para dúvidas acadêmicas, científicas e técnicas.</li>  
+                          <li><strong>Interação Personalizada:</strong> Pode ser ajustado para diferentes estilos de conversa, desde um tom mais técnico até um estilo informal e amigável.</li>  
+                        </ul>  
+                        <h2>Como o ChatGPT Funciona?</h2>  
+                        <p>O ChatGPT utiliza um modelo de aprendizado profundo baseado na arquitetura Transformer, que permite processar e gerar texto de forma contextualizada. Ele foi treinado com uma grande variedade de dados textuais da internet, incluindo livros, artigos e interações humanas, permitindo que responda com coerência e precisão.</p> 
+                        <p>Além disso, a OpenAI implementou técnicas de alinhamento, como aprendizado por reforço com feedback humano (RLHF), para tornar as respostas mais úteis e seguras.</p>  
+                        <h2>Aplicações do ChatGPT</h2>  
+                        <p>O ChatGPT pode ser utilizado em diversas áreas, como:</p>  
+                        <ul>  
+                          <li><strong>Atendimento ao Cliente:</strong> Empresas usam o ChatGPT para criar chatbots e assistentes virtuais que ajudam a responder perguntas e resolver problemas dos clientes.</li>  
+                          <li><strong>Educação:</strong> Auxilia estudantes e professores na compreensão de conceitos complexos, fornecendo explicações detalhadas e sugestões de estudo.</li>  
+                          <li><strong>Desenvolvimento de Software:</strong> Programadores utilizam o ChatGPT para depurar código, aprender novas linguagens e obter sugestões de otimização.</li>  
+                          <li><strong>Marketing e Criação de Conteúdo:</strong> Gera textos para postagens em redes sociais, e-mails, descrições de produtos e campanhas publicitárias.</li>  
+                          <li><strong>Saúde e Bem-estar:</strong> Oferece dicas de hábitos saudáveis, organização do dia a dia e até mesmo técnicas de relaxamento.</li>  
+                        </ul>  
+                        <h2>Conclusão</h2>  
+                        <p>O ChatGPT é uma tecnologia revolucionária que transforma a maneira como interagimos com a inteligência artificial. Seja para responder perguntas, gerar conteúdo, auxiliar no desenvolvimento de software ou criar assistentes virtuais, ele se destaca como uma ferramenta poderosa e versátil.</p>  
+                    </div>
+                </div>
+
+                <div class="desafio">
+                    <div class="dish-heart" >
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="src/images/gemini.png" class="dish-image" alt="">
+                    <h3 class="dish-title">Gemini</h3>
+                    <span class="dish-description">
+                        Gemini: A IA multimodal que entende o mundo como você. O futuro da inteligência artificial esta aqui!
+                    </span>
+                    <div class="dish-price">
+                        <button class="btn-default" onclick="openModal('modal-container-gemini')">
+                            Clique aqui
+                        </button>
+                    </div>
+                </div>
+                <div id="modal-container-gemini" class="modal-container">
+                    <div class="modal">
+                        <button class="fechar" id="fechar">X</button>
+                        <h2>Gemini – Inteligência Artificial do Google</h2>  
+                        <p>O Gemini é a nova geração de inteligência artificial desenvolvida pelo Google, projetada para atender a diversas necessidades, desde processamento avançado de informações até aplicações otimizadas para dispositivos móveis. Ele conta com diferentes versões, cada uma adaptada para casos de uso específicos.</p> 
+                        
+                        <h2>Principais Modelos do Gemini</h2> 
+                        <ul>  
+                          <li><strong>Gemini Ultra:</strong> O modelo mais avançado da série, ideal para tarefas altamente complexas que exigem alto nível de raciocínio e processamento.</li>  
+                          <li><strong>Gemini Pro:</strong> Um modelo equilibrado entre desempenho e eficiência, adequado para uma ampla gama de aplicações empresariais.</li>  
+                          <li><strong>Gemini Flash:</strong> Otimizado para respostas rápidas e eficiência, sendo útil em interações que demandam baixa latência.</li>  
+                          <li><strong>Gemini Nano:</strong> Desenvolvido para rodar diretamente em dispositivos móveis, garantindo inteligência artificial local sem necessidade de servidores externos.</li>  
+                        </ul>  
+                        
+                        <h2>Como o Gemini Funciona?</h2>  
+                        <p>O Gemini é um modelo multimodal, o que significa que ele pode processar e compreender diferentes tipos de dados, como texto, imagens, áudio e vídeos. Além disso, sua integração nativa com os serviços do Google o torna uma ferramenta poderosa para produtividade e automação.</p> 
+                        
+                        <h2>Aplicações do Gemini</h2>  
+                        <p>Os modelos Gemini podem ser aplicados em diversas áreas, incluindo:</p>  
+                        <ul>  
+                          <li><strong>Pesquisa e Desenvolvimento:</strong> Auxilia na análise e interpretação de grandes volumes de dados para inovação.</li>  
+                          <li><strong>Atendimento ao Cliente:</strong> Melhora a eficiência de chatbots e assistentes virtuais.</li>  
+                          <li><strong>Educação:</strong> Oferece suporte no aprendizado, traduzindo conteúdos e explicando conceitos complexos.</li>  
+                          <li><strong>Criação de Conteúdo:</strong> Gera textos, resumos e auxilia no desenvolvimento de materiais para marketing digital.</li>  
+                          <li><strong>Dispositivos Móveis:</strong> Com o Gemini Nano, é possível ter inteligência artificial diretamente no celular sem depender de conexão com a nuvem.</li>  
+                        </ul>  
+                        <h2>Conclusão</h2>  
+                        <p>O Gemini representa um grande avanço na inteligência artificial, trazendo soluções escaláveis para diversas áreas. Seja para análises profundas, automação empresarial ou interações rápidas em dispositivos móveis, os modelos do Gemini se destacam pela versatilidade e eficiência.</p>  
+                    </div>
+                </div>
+                
+
+
+                <div class="desafio">
+                    <img src="src/images/deepseek.png" class="dish-image" alt="">
+                    <h3 class="dish-title">
+                        DeepSeek
+                    </h3>
+                    <span class="dish-description">
+                        Transforme seus dados em realidade. A IA que gera resultados tangíveis, e te leva ao próximo nível.
+                    </span>
+                    <div class="dish-price">
+                        <button class="btn-default" onclick="openModal('modal-container-deepseek')">
+                            Clique aqui
+                        </button>
+                    </div>  
+                </div>
+                <div id="modal-container-deepseek" class="modal-container">
+                    <div class="modal">
+                        <button class="fechar" id="fechar">X</button>
+                        <h2>Inovação e Eficiência na Inteligência Artificial</h2>
+                        <p>A Deep Seek é uma empresa emergente no setor de inteligência artificial, reconhecida por suas abordagens inovadoras no desenvolvimento de modelos e desempenho aprimorado. Fundada em 2021 por um grupo de pesquisadores e engenheiros, a Deep Seek nasceu com o objetivo de atender à crescente demanda por sistemas de IA mais eficientes e escaláveis, superando as limitações das redes neurais tradicionais em termos de eficiência computacional, generalização e adaptação a diferentes tarefas.</p>
+                        <h2>Principais Marcos da Deep Seek</h2>
+                        <ul>
+                            <li><strong>2021:</strong> Desenvolvimento inicial da estrutura central da Deep Seek.</li>
+                            <li><strong>2022:</strong> Implementação bem-sucedida, alcançando recordes em tarefas de reconhecimento de imagens.</li>
+                            <li><strong>2023:</strong> Expansão para o processamento de linguagem natural, superando benchmarks existentes na compreensão e geração de texto.</li>
+                        </ul>
+                        <h2>Inovações Tecnológicas</h2>
+                        <h4>Arquitetura</h4>
+                        <p>A arquitetura da Deep Seek representa um avanço significativo na IA, com o uso do mecanismo de Multi-Head Latent Attention (MLA) e estratégias de Mixture of Experts (MoE). O MLA permite que os modelos processem múltiplos fluxos de dados simultaneamente, melhorando a identificação de relações contextuais e reduzindo o uso de memória em comparação com a atenção multi-head tradicional.</p>
+                        <h4>Aprendizado por Reforço</h4>
+                        <p>A Deep Seek incorporou aprendizado por reforço ao seu modelo R1, melhorando suas capacidades de raciocínio e resolução de problemas complexos. O modelo aprende e se aperfeiçoa continuamente por meio de tentativa e erro, refinando suas habilidades ao longo do tempo.</p>
+                        <h4>Desempenho e Eficiência</h4>
+                        <p>Os modelos da Deep Seek demonstraram avanços significativos em métricas de desempenho, sendo um referencial em escalabilidade e eficiência, com técnicas como auxiliary-loss-free load balancing e Multi-Token Prediction (MTP).</p>
+                        <h4>Considerações Éticas e Imparcialidade</h4>
+                        <p>A Deep Seek também enfrenta desafios éticos relacionados a viés e imparcialidade, e continua a inovar no desenvolvimento de soluções que busquem a imparcialidade e tragam valor transformador para a comunidade de IA.</p>
+                        <h2>Conclusão</h2>
+                        <p>A Deep Seek é uma força inovadora no campo da inteligência artificial, com abordagens e tecnologias avançadas que estão moldando o futuro das IAs e da computação em geral.</p>
+                    </div>
+                </div>
+                
+
+                <div class="desafio">
+                    <img src="src/images/copilot.png" class="dish-image" alt="">
+                    <h3 class="dish-title">
+                        Copilot
+                    </h3>
+                    <span class="dish-description">
+                        Seu novo parceiro de trabalho com IA. Produtividade e criatividade ilimitadas ao seu alcance.
+                    </span>
+                    <div class="dish-price">
+                        <button class="btn-default" onclick="openModal('modal-container-copilot')">
+                            Clique aqui
+                        </button>
+                    </div>  
+                </div>
+                <div id="modal-container-copilot" class="modal-container">
+                    <div class="modal">
+                        <button class="fechar" id="fechar">X</button>
+                        <h2>Descobrindo o Copilot, a Inteligência Artificial da Microsoft</h2>
+                        <p>Na aula de hoje, quero te apresentar o Copilot, a inteligência artificial da Microsoft, como se fosse o ChatGPT da Microsoft.</p>
+                        <p>Vou te mostrar como usar essa inteligência artificial, quais são os recursos disponíveis nela, como utilizá-la integrada ao Windows direto da área de trabalho do seu computador e muito mais.</p>
+                        <p>Você verá que ele é atualizado em tempo real, oferece links para complementar sua pesquisa e ainda pode gerar imagens de forma gratuita e rápida dentro dele, além de analisar gráficos e arquivos do seu computador.</p>
+                        <p>E aí, curtiu? Quer descobrir mais funcionalidades dessa IA? Então, vem comigo que eu vou te mostrar todos os detalhes dessa inteligência artificial!</p>
+                        <h2>O que é o Copilot?</h2>
+                        <p>O Copilot é uma ferramenta de inteligência artificial criada pela Microsoft, semelhante ao ChatGPT da OpenAI e ao Gemini do Google.</p>
+                        <h2>Vantagens do Copilot</h2>
+                        <p>A vantagem do Copilot em relação ao ChatGPT e ao Gemini é a capacidade de interagir e integrar facilmente com os outros programas da Microsoft, como o Excel, Word e o PowerPoint, aumentando seu potencial e suas funcionalidades.</p>
+                        <h4>Copilot na área de trabalho</h4>
+                        <p>Sendo da Microsoft, ele também é facilmente integrado com o Microsoft Edge, permitindo fazer análises e perguntas direto das abas do navegador.</p>
+                        <p>Assim como a grande maioria das inteligências artificiais, o Copilot também apresenta uma versão paga e uma versão gratuita.</p>
+                        <p>A versão gratuita dá acesso à IA dentro do Microsoft Edge e da área de trabalho do seu computador. Já a integração com o pacote Microsoft 365 (Excel, Word, PowerPoint) está limitada à versão paga e, atualmente, apenas nos Estados Unidos.</p>
+                        <h2>Como o Copilot Funciona?</h2>
+                        <p>O Copilot funciona de forma muito parecida ao ChatGPT, permitindo a interação com a inteligência artificial através de um chat.</p>
+                        <p>Para utilizá-lo, basta acessar através da sua área de trabalho ou através da página oficial e fazer login com uma conta Microsoft.</p>
+                        <p>A utilização dele é bastante simples; você pode fazer perguntas e solicitar ajuda em tarefas diversas.</p>
+                        <h4>Diferenciais do Copilot</h4>
+                        <p>Além da integração com os aplicativos da Microsoft, o Copilot oferece links para conteúdos relevantes na internet, relacionados ao assunto abordado, permitindo que você se aprofunde ainda mais nos temas tratados.</p>
+                        <h4>Avaliação de Respostas</h4>
+                        <p>Ao final de cada resposta, temos a possibilidade de avaliar se aquela foi uma boa resposta ou não. Esse feedback contribui para o aprendizado contínuo dessa inteligência artificial.</p>
+                        <h4>Copiar e Exportar Respostas</h4>
+                        <p>Ao lado das opções de avaliação de resposta, você encontra uma opção para copiar o texto da resposta ou exportar o conteúdo diretamente em um arquivo Word, PDF ou de texto.</p>
+                        <h4>Compartilhar Resposta</h4>
+                        <p>Você pode também compartilhar a resposta por link direto ou em suas redes sociais, ou até mesmo ler a resposta em voz alta.</p>
+                
+                        <h4>Integração com o Windows</h4>
+                        <p>O Copilot oferece uma integração direta com o Windows, permitindo que você o acesse diretamente da sua área de trabalho, sem a necessidade de manter o navegador aberto.</p>
+                
+                        <h4>Histórico de Conversas</h4>
+                        <p>Assim como o ChatGPT, o Copilot mantém um histórico de conversas registradas caso você tenha interesse em acessá-las novamente.</p>
+                
+                        <h4>Gerando Imagens</h4>
+                        <p>Uma funcionalidade bem interessante do Copilot é a capacidade de gerar imagens personalizadas, utilizando a IA DALL·E 3, que pode ser acessada de forma gratuita.</p>
+                
+                        <h4>Analisando Gráficos</h4>
+                        <p>O Copilot também pode interpretar e analisar diversos tipos de arquivos, como PDFs, planilhas Excel e imagens. Você pode usá-lo, por exemplo, para analisar gráficos.</p>
+                
+                        <h2>Conclusão – Descobrindo o Copilot</h2>
+                        <p>O Copilot é uma ferramenta poderosa, com diversos recursos gratuitos que podem ser muito úteis no seu dia a dia de trabalho e estudos. Ele oferece atualizações em tempo real e é integrado diretamente com o seu Windows, o que facilita o acesso e torna a interação ainda mais prática.</p>
+                        
+                    </div>
+                </div>
+                
+
+
+                <div class="desafio">
+                    <img src="src/images/bard.png" class="dish-image" alt="">
+                    <h3 class="dish-title">
+                        Bard
+                    </h3>
+                    <span class="dish-description">
+                        A IA do Google que te ajuda a escrever, pensar e imaginar. Deixe turbinar sua produtividade.
+                    </span>
+                    <div class="dish-price">
+                        <button class="btn-default" onclick="openModal('modal-container-bard')">
+                            Clique aqui
+                        </button>
+                    </div>  
+                </div>
+                <div id="modal-container-bard" class="modal-container">
+                    <div class="modal">
+                        <button class="fechar" id="fechar">X</button>
+                        <h1>O que é Bard? Como usar a IA do Google</h1>
+                        <p>O lançamento em novembro de 2022 do ChatGPT, um chatbot conversacional online, colocou outras big techs para correr atrás da Inteligência Artificial (IA). Em fevereiro de 2023, o Google lançou o Bard, sua própria IA, com o objetivo de competir diretamente com o ChatGPT da OpenAI.</p>
+                        <p>O Bard é uma IA voltada para conversação, desenvolvida para oferecer respostas rápidas e precisas a perguntas feitas pelos usuários, além de fornecer resumos de textos, ideias criativas e até análises de dados.</p>
+                        <p>Ele é integrado com o Google Search, o que significa que suas respostas são alimentadas com informações atualizadas diretamente da web.</p>
+                
+                        <h3>Como usar o Bard?</h3>
+                        <p>Para usar o Bard, você deve acessar o site oficial do Google Bard, onde você será convidado a fazer login com sua conta Google. A partir daí, você pode começar a interagir com a IA, fazendo perguntas ou pedindo ajuda para realizar diversas tarefas.</p>
+                
+                        <h4>Funcionalidades do Bard</h4>
+                        <p>O Bard possui diversas funcionalidades interessantes, como:</p>
+                        <ul>
+                            <li>Respostas rápidas e objetivas sobre vários tópicos;</li>
+                            <li>Geração de ideias criativas e conteúdo escrito;</li>
+                            <li>Resumos de artigos, livros ou qualquer outro tipo de texto;</li>
+                            <li>Busca por informações mais aprofundadas e atualizadas na web.</li>
+                        </ul>
+                
+                        <h3>Diferenças do Bard em relação ao ChatGPT</h3>
+                        <p>Embora tanto o Bard quanto o ChatGPT sejam chatbots conversacionais, a grande diferença está na integração com o Google Search. Enquanto o ChatGPT oferece respostas com base em um modelo treinado em grandes volumes de dados, o Bard pode fornecer informações mais recentes, puxando diretamente da web para oferecer respostas sempre atualizadas.</p>
+                
+                        <h4>Como usar a IA no Google Bard?</h4>
+                        <p>Para usar a IA do Bard, basta acessar sua página e começar a interagir. Pergunte sobre qualquer tema e veja como ele pode te ajudar a encontrar respostas, escrever textos e até desenvolver ideias criativas!</p>
+                
+                        <h3>Conclusão – Conhecendo o Bard</h3>
+                        <p>O Bard chegou para competir diretamente com outras IAs como o ChatGPT, oferecendo uma ferramenta inteligente que integra a vastidão do Google Search para fornecer respostas rápidas, criativas e atualizadas. Experimente e veja o poder dessa inteligência artificial no seu dia a dia!</p>
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+
+        <section id="testimonials">
+            <img src="src/images/chef.png" id="testimonial_chef" alt="">
+
+            <div id="testimonials_content">
+                <h2 class="section-title">
+                    Ética na IA
+                </h2>
+                <h3 class="section-subtitle">
+                    Desafios da Inteligência Artificial
+                </h3>
+
+                <div id="feedbacks">
+                    <div class="feedback">
+                        <img src="src/images/1.png" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p class="nome">
+                                Desafio 1: Transparência nos Algoritmos
+                            </p>
+                            <p>
+                                A falta de transparência nos algoritmos utilizados por IA 
+                                pode resultar em decisões injustas ou discriminatórias. A 
+                                necessidade de criar sistemas de IA que sejam explicáveis e 
+                                compreensíveis é um dos maiores desafios enfrentados hoje.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feedback">
+                        <img src="src/images/2.png" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p class="nome">
+                                Desafio 2: Viés nos Dados
+                            </p>
+                            <p>
+                                IAs treinadas com dados tendenciosos podem perpetuar ou até 
+                                amplificar preconceitos existentes. Garantir que os dados 
+                                utilizados para treinar essas IAs sejam representativos e 
+                                imparciais é um desafio constante.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feedback">
+                        <img src="src/images/3.png" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p class="nome">
+                                Desafio 3: Privacidade e Segurança
+                            </p>
+                            <p>
+                                Com o uso crescente de IA em diversas áreas, a privacidade dos dados 
+                                pessoais é uma grande preocupação. Criar soluções que protejam 
+                                a privacidade dos indivíduos enquanto ainda aproveitam o poder 
+                                da IA é um desafio constante.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feedback">
+                        <img src="src/images/4.png" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p class="nome">
+                                Desafio 4: Autonomia e Controle
+                            </p>
+                            <p>
+                                À medida que a IA se torna mais avançada, a questão de 
+                                como equilibrar a autonomia das máquinas com o controle humano 
+                                se torna mais relevante. Encontrar esse equilíbrio é fundamental 
+                                para evitar riscos de decisões imprevistas ou indesejadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="referencias">
+            <h2 class="section-title">Fontes de pesquisa:</h2>
+            <h3 class="section-subtitle">Referências bibliográficas</h3><br><br>
+            <p class="description">
+                <strong>RICARDO</strong>.Feminismo e Robótica: As Mulheres que estão Construindo o Futuro. 
+                Disponível em: https://lucidarium.com.br/feminismo-robotica-mulheres-construindo-futuro. 
+                Acesso em: 23 fev. 2025.
+            </p><br>
+            <p class="description">
+                <strong>RAFAEL</strong>.A Inteligência Artificial: Uma Visão Abrangente. Disponível em: 
+                https://milagredigital.com/inteligencia-artificial-visao-abrangente. 
+                Acesso em: 23 fev. 2025.
+            </p><br>
+            <p class="description">
+                <strong>Descobrindo o Copilot - Inteligência Artificial da Microsoft</strong>. Disponível em: 
+                https://www.hashtagtreinamentos.com/copilot-ia?gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlN5mq2rog-zP6WxUwVlgLKFqizKuL7ydQGmYCzCmsBu-pbNWzB9iedhoCwEMQAvD_BwE. 
+                Acesso em: 24 fev. 2025.
+            </p><br>
+            <p class="description">
+                <strong>PANCINI, L</strong>. O que é Bard? Como usar a IA do Google. Disponível em: 
+                https://exame.com/inteligencia-artificial/bard-ia-do-google-esta-disponivel-no-brasil-a-partir-desta-quinta-veja-como-acessar
+                Acesso em: 24 fev. 2025.
+            </p><br>
+            <p class="description">
+                <strong>WIKERSON LANDIM</strong>. Mundo Conectado. Disponível em: 
+                https://www.mundoconectado.com.br/tecnologia/chat-gpt-o-que-e-como-funciona-e-como-usar. 
+                Acesso em: 24 fev. 2025.
+            </p><br>
+            <p class="description">
+                <strong>STEFANELLO, L. A</strong>. ChatGPT e Deep Seek: Comparativo de Inteligência Artificial - InCuca Tech. 
+                Disponível em: https://incuca.net/chat-gpt-e-deep-seek-comparativo-de-inteligencia-artificial. 
+                Acesso em: 24 fev. 2025.
+            </p><br>
+            <p class="description">
+                <strong>PETRY, R</strong>. DeepSeek AI vs. ChatGPT: veja quais são as diferenças segundo o GPT. 
+                Disponível em: https://www.infomoney.com.br/business/deepseek-versus-chatgpt-em-8-pontos-quais-sao-as-diferencas-segundo-a-ia.
+                Acesso em: 24 fev. 2025.
+            </p><br>
+            <p class="description">
+                <strong>VALBÃO, M</strong>. Após sucesso de DeepSeek, ChatGPT lança nova ferramenta. 
+                Disponível em: https://www.cnnbrasil.com.br/tecnologia/apos-sucesso-de-deepseek-chatgpt-lanca-nova-ferramenta. 
+                Acesso em: 24 fev. 2025.
+            </p><br>
+            <p class="description">
+                <strong>OLIVEIRA, D</strong>. Gemini Ultra, Pro, Flash e Nano: saiba a diferença entre modelos de IA do Google. 
+                Disponível em: https://olhardigital.com.br/2024/10/17/reviews/gemini-ultra-pro-flash-e-nano-saiba-a-diferenca-entre-modelos-de-ia-do-google. 
+                Acesso em: 25 fev. 2025.
+            </p><br>
+            <p class="description">
+                <strong>DÉBORA ELISA</strong>. O que o Chat GPT sabe sobre você? Conheça nova trend e veja o que a IA “pensa”. 
+                Disponível em: https://www.otempo.com.br/tecnologia-e-games/2024/10/15/o-que-o-chat-gpt-sabe-sobre-voce--conheca-nova-trend-e-veja-o-qu. 
+                Acesso em: 25 fev. 2025.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <img src="src/images/wave.svg">
+
+
+        <div id="footer_items">
+            <span id="copyright">
+                &copy 2025 Isadora Correa
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="https://api.whatsapp.com/send/?phone=%2B5515991123753&text&type=phone_number&app_absent=0">
+                    <i class="fa-brands fa-whatsapp" style="color: #E90074;"></i>
+                </a>
+
+                <a href="https://www.instagram.com/isadora_socialmedia/">
+                    <i class="fa-brands fa-instagram" style="color: #E90074;"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/IsadoraCorrea">
+                    <i class="fa-brands fa-linkedin" style="color: #E90074;"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>
