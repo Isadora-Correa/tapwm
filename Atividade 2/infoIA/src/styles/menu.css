@@ -54,13 +54,13 @@
         justify-content: center;
     }
 
-    .dish {
+    .desafio {
         width: calc(50% - 12px);
     }
 }
 
 @media screen and (max-width: 600px) {
-    .dish {
+    .desafio {
         width: 100%;
     }
 
