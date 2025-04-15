@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  background: #021526;
+  color:  #E2E2B6;
+  font-family: "Poppins";
+}
+.message {
+  margin: 2% 0 -5%;
+  font-size: 55px;
+  font-weight: bolder;
+  text-align: center;
+}
+.images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+}
+.computer img,
+.player img {
+  width: 100%;
+  margin-top: 40%;
+}
+.shakeComputer {
+  animation: shakeComputer 0.8s linear;
+}
+.shakePlayer {
+  animation: shakePlayer 0.8s linear;
+}
+.points {
+  margin-top: 6%;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+}
+.computerPoints {
+  margin-left: 3em;
+}
+.playerPoints {
+  margin-right: 3em;
+}
+.options {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+.options button {
+  background: none;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 20px;
+  border: 1px solid #E2E2B6;
+  padding: 1em 2em;
+  border-radius: 25px;
+  width: 250px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  margin: 17px;
+  transition: 0.2s all linear;
+}
+.container{
+  display: grid;
+  place-items: center;
+}
+.options button:hover {
+  background-color:  #E2E2B6;
+  border: 1px solid  #E2E2B6;
+  color: #021526;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.fundo-back{
+  background-color: #E2E2B6;
+  align-items:center;
+  width: 75%;
+  margin-top: 11%;
+  height: 87%;
+  border-radius: 40px;
+}
+@keyframes shakeComputer {
+  0% {
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes shakePlayer {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
