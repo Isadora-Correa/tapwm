@@ -1,56 +1,60 @@
-// 1. Retornar o maior de três números
-function maiorNumero(a, b, c) {
-    return Math.max(a, b, c);
+function executarExercicio1() {
+  const x = Number(document.getElementById('num1').value);
+  const y = Number(document.getElementById('num2').value);
+  const z = Number(document.getElementById('num3').value);
+
+  if (isNaN(x) || isNaN(y) || isNaN(z)) {
+    document.getElementById('resultado1').innerHTML = 'Por favor, preencha os 3 números corretamente.';
+    return;
   }
-  
-  function mostrarMaior() {
-    const a = parseFloat(document.getElementById("n1").value);
-    const b = parseFloat(document.getElementById("n2").value);
-    const c = parseFloat(document.getElementById("n3").value);
-    document.getElementById("maiorResultado").textContent = "Maior: " + maiorNumero(a, b, c);
+
+  const soma = x + y + z;
+  const quadradoPrimeiro = x ** 2;
+  const quadradoSegundo = y ** 2;
+
+  document.getElementById('resultado1').innerHTML = `
+    A <b>soma</b> dos três números é: <b>${soma}</b><br>
+    O <b>quadrado do primeiro</b> (${x}) é: <b>${quadradoPrimeiro}</b><br>
+    O <b>quadrado do segundo</b> (${y}) é: <b>${quadradoSegundo}</b>
+  `;
+}
+
+function executarExercicio2() {
+  const letras = [
+    document.getElementById('letra1').value,
+    document.getElementById('letra2').value,
+    document.getElementById('letra3').value,
+    document.getElementById('letra4').value,
+    document.getElementById('letra5').value
+  ];
+
+  if (letras.some(l => l.length !== 1 || !/^[a-zA-Z]$/.test(l))) {
+    document.getElementById('resultado2').innerHTML = 'Digite 5 letras válidas (A-Z).';
+    return;
   }
-  
-  // 2. Retornar os números em ordem crescente
-  function ordenarNumeros(a, b, c) {
-    return [a, b, c].sort((x, y) => x - y);
-  }
-  
-  function mostrarOrdenados() {
-    const a = parseFloat(document.getElementById("o1").value);
-    const b = parseFloat(document.getElementById("o2").value);
-    const c = parseFloat(document.getElementById("o3").value);
-    document.getElementById("ordenadoResultado").textContent = "Ordenados: " + ordenarNumeros(a, b, c).join(", ");
-  }
-  
-  // 3. Verificar se é palíndromo
-  function ehPalindromo(str) {
-    const limpa = str.toLowerCase().replace(/\s/g, '');
-    const invertida = limpa.split('').reverse().join('');
-    return limpa === invertida;
-  }
-  
-  function verificarPalindromo() {
-    const palavra = document.getElementById("palavra").value;
-    const resultado = ehPalindromo(palavra) ? "É um palíndromo!" : "Não é um palíndromo.";
-    document.getElementById("palindromoResultado").textContent = resultado;
-  }
-  
-  // 4. Verificar se é subconjunto
-  function ehSubconjunto(str1, str2) {
-    if (!str1 || !str2) return "erro";
-  
-    for (let char of str2.toLowerCase()) {
-      if (!str1.toLowerCase().includes(char)) {
-        return "não é um subconjunto";
+
+  const palavras = [];
+  const temp = [];
+
+  function permutacoes(arr, prefixo = '') {
+    if (prefixo.length === 5) {
+      if (!palavras.includes(prefixo)) {
+        Array.prototype.push.apply(palavras, [prefixo]); 
       }
+      return;
     }
-    return "é um subconjunto";
+
+    for (let i = 0; i < arr.length; i++) {
+      const novaArr = [...arr];
+      novaArr.splice(i, 1);
+      permutacoes(novaArr, prefixo + arr[i]);
+      if (palavras.length >= 10) break;
+    }
   }
-  
-  function verificarSubconjunto() {
-    const palavra1 = document.getElementById("palavra1").value;
-    const palavra2 = document.getElementById("palavra2").value;
-    const resultado = ehSubconjunto(palavra1, palavra2);
-    document.getElementById("subconjuntoResultado").textContent = resultado;
-  }
-  
+
+  permutacoes(letras);
+
+  document.getElementById('resultado2').innerHTML = `
+    <b>10 palavras formadas:</b> ${palavras.slice(0, 10).join(', ')}
+  `;
+}
