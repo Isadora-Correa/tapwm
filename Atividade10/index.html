@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade 10</title>
+</head>
+<body>
+  <script>
+        // Forma 1: Objeto Literal
+    const Funcionario1 = {
+    matricula: "001",
+    nome: "Isadora Carvalho",
+    funcao: "Desenvolvedora Júnior"
+    };
+
+    alert("Forma 1 - Objeto Literal:\n" +
+        "Matrícula: " + Funcionario1.matricula + "\n" +
+        "Nome: " + Funcionario1.nome + "\n" +
+        "Função: " + Funcionario1.funcao);
+
+    // Forma 2: Função Construtora
+    function Funcionario(matricula, nome, funcao) {
+    this.matricula = matricula;
+    this.nome = nome;
+    this.funcao = funcao;
+    }
+
+    const funcionario2 = new Funcionario("002", "Lucas Silva", "Designer");
+
+    alert("Forma 2 - Função Construtora:\n" +
+        "Matrícula: " + funcionario2.matricula + "\n" +
+        "Nome: " + funcionario2.nome + "\n" +
+        "Função: " + funcionario2.funcao);
+
+    // Forma 3: Classe
+    class FuncionarioClasse {
+    constructor(matricula, nome, funcao) {
+        this.matricula = matricula;
+        this.nome = nome;
+        this.funcao = funcao;
+    }
+    }
+
+    const funcionario3 = new FuncionarioClasse("003", "Ana Paula", "Analista de Dados");
+
+    alert("Forma 3 - Classe:\n" +
+        "Matrícula: " + funcionario3.matricula + "\n" +
+        "Nome: " + funcionario3.nome + "\n" +
+        "Função: " + funcionario3.funcao);
+  </script>
+</body>
+</html>
