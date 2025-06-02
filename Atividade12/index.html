@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Abra a Janela</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1 id="estado-janela">Janela Fechada</h1>
+  <img id="imagem-janela" src="janela-fechada.jpg" alt="Janela" />
+
+  <script>
+    const imagemJanela = document.getElementById('imagem-janela');
+    const estadoJanela = document.getElementById('estado-janela');
+
+    const imagens = {
+      fechada: 'janela-fechada.jpg',
+      aberta: 'janela-aberta.jpg',
+      quebrada: 'janela-quebrada.jpg'
+    };
+
+    let estadoAtual = 'fechada';
+
+    imagemJanela.addEventListener('mouseover', () => {
+      if (estadoAtual !== 'quebrada') {
+        imagemJanela.src = imagens.aberta;
+        estadoJanela.textContent = 'Janela Aberta';
+      }
+    });
+
+    imagemJanela.addEventListener('mouseout', () => {
+      if (estadoAtual !== 'quebrada') {
+        imagemJanela.src = imagens.fechada;
+        estadoJanela.textContent = 'Janela Fechada';
+      }
+    });
+
+    imagemJanela.addEventListener('click', () => {
+      imagemJanela.src = imagens.quebrada;
+      estadoJanela.textContent = 'Janela Quebrada';
+      estadoAtual = 'quebrada';
+    });
+  </script>
+</body>
+</html>
