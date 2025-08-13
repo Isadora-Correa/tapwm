@@ -17,4 +17,4 @@ Consolidar os aprendizados através da prática, compartilhando códigos e ideia
 
 ---
 
-Sinta-se à vontade para explorar, testar e contribuir! Vamos codar juntos! 🤝💻
+Sinta-se à vontade para explorar, testar e contribuir! Vamos codar juntos! 💻
