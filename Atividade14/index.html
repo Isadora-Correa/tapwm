@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Validação de Formulário</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="modal" id="feedback-modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="modal-title">Sucesso!</h3>
+            <p class="modal-message" id="modal-message-text"></p>
+            <button class="modal-close-btn" id="modal-close-btn">Fechar</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="info-lado">
+            <h3><i class="fa-solid fa-clipboard-list"></i> Instruções do Exercício</h3>
+            <p class="amigavel">
+                Olá! Este exercício combina um layout moderno com as regras de validação que aprendemos. O objetivo é testar os campos do formulário ao lado para garantir que eles sigam todas as regras definidas.
+            </p>
+            <ul class="regras-lista">
+                <li><i class="fa-solid fa-check"></i> Nome deve ter no mínimo 10 caracteres.</li>
+                <li><i class="fa-solid fa-check"></i> O campo E-mail é obrigatório e deve ser válido.</li>
+                <li><i class="fa-solid fa-check"></i> Comentário deve ter no mínimo 20 caracteres.</li>
+                <li><i class="fa-solid fa-check"></i> A Pesquisa é de preenchimento obrigatório.</li>
+            </ul>
+        </div>
+
+        <div class="form-lado">
+            <form name="formPrincipal" id="meuFormulario" novalidate>
+                <h2>Formulário Principal</h2>
+                
+                <div class="input-grupo">
+                    <input type="text" name="nome" required placeholder=" ">
+                    <label>Nome Completo</label>
+                    <div class="error-message" id="error-nome"></div>
+                </div>
+                
+                <div class="input-grupo">
+                    <input type="email" name="email" required placeholder=" ">
+                    <label>Seu melhor e-mail</label>
+                    <div class="error-message" id="error-email"></div>
+                </div>
+                
+                <div class="input-grupo">
+                    <textarea name="comentario" rows="4" required placeholder=" "></textarea>
+                    <label>Comentário</label>
+                    <div class="error-message" id="error-comentario"></div>
+                </div>
+
+                <div class="pesquisa-grupo">
+                    <p>Primeira vez nesta página?</p>
+                    <div class="radio-opcoes">
+                        <input type="radio" id="sim" name="pesquisa" value="sim">
+                        <label for="sim">Sim</label>
+                        <input type="radio" id="nao" name="pesquisa" value="nao">
+                        <label for="nao">Não</label>
+                    </div>
+                    <div class="error-message" id="error-pesquisa"></div>
+                </div>
+
+                <button type="submit">Validar</button>
+
+                <div id="resultado-final"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

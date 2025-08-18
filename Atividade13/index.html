@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 13 - Conversor de Texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="card">
+        <h1>Exercício - Transformar Texto</h1>
+        <p>Digite algo no campo abaixo e escolha uma opção para formatar o texto.</p>
+
+        <div class="input-container">
+            <input type="text" id="inputText" placeholder="Digite seu texto ou código morse aqui...">
+        </div>
+
+        <div class="radio-container">
+            <div class="radio-option">
+                <input type="radio" id="radioMaiusculas" name="transform" value="upper">
+                <label for="radioMaiusculas">MAIÚSCULAS</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="radioMinusculas" name="transform" value="lower">
+                <label for="radioMinusculas">minúsculas</label>
+            </div>
+             <div class="radio-option">
+                <input type="radio" id="radioOriginal" name="transform" value="original" checked>
+                <label for="radioOriginal">Manter Original</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="radioMorse" name="transform" value="morse">
+                <label for="radioMorse">Texto para Morse</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="radioMorseToText" name="transform" value="morseToText">
+                <label for="radioMorseToText">Morse para Texto</label>
+            </div>
+        </div>
+        
+        <div class="result-container">
+            <h2>Resultado</h2>
+            <div id="resultOutput" class="result-box">
+                O resultado aparecerá aqui...
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
