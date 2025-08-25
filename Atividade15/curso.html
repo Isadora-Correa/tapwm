@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Curso</title>
+    <link rel="stylesheet" href="curso-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="coluna-texto">
+            <h1 id="curso-titulo">Carregando...</h1>
+            <p id="curso-descricao"></p>
+        </div>
+        <div class="coluna-imagem">
+            <img id="curso-imagem" src="" alt="Imagem ilustrativa do curso">
+        </div>
+    </div>
+
+    <script>
+        // Este script é executado assim que a página 'curso.html' é carregada
+        document.addEventListener('DOMContentLoaded', () => {
+            // Pega os dados do curso que foram salvos pelo script.js
+            const dadosSalvos = localStorage.getItem('cursoData');
+
+            if (dadosSalvos) {
+                const dadosCurso = JSON.parse(dadosSalvos);
+
+                // Preenche os elementos da página com os dados corretos
+                document.getElementById('curso-titulo').textContent = dadosCurso.titulo;
+                document.getElementById('curso-descricao').textContent = dadosCurso.descricao;
+                document.getElementById('curso-imagem').src = dadosCurso.imagem;
+                document.title = dadosCurso.titulo; // Atualiza o título da aba
+            } else {
+                // Caso a página seja aberta diretamente, sem escolher um curso
+                document.getElementById('curso-titulo').textContent = 'Nenhum curso selecionado';
+                document.getElementById('curso-descricao').textContent = 'Por favor, volte à página principal e selecione um curso para ver os detalhes.';
+            }
+        });
+    </script>
+</body>
+</html>

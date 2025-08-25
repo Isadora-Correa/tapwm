@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos Fatec Sorocaba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Cursos Fatec Sorocaba</h1>
+            <p>Escolha um dos cursos abaixo para visualizar mais detalhes.</p>
+        </header>
+        
+        <div class="select-wrapper">
+            <select id="seletorCursos" onchange="carregarCurso()">
+                <option value="">-- Por favor, escolha uma opção --</option>
+                <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+                <option value="ams-ads">Análise e Desenvolvimento de Sistemas [AMS]</option>
+                <option value="eletronica">Eletrônica Automotiva</option>
+                <option value="fabricacao">Fabricação Mecânica</option>
+                <option value="gestao-ead">Gestão Empresarial - EAD</option>
+                <option value="qualidade">Gestão da Qualidade</option>
+                <option value="logistica">Logística</option>
+                <option value="ams-log">Logística [AMS]</option>
+                <option value="manufatura">Manufatura Avançada</option>
+                <option value="aeronaves">Manutenção de Aeronaves</option>
+                <option value="polimeros">Polímeros</option>
+                <option value="metalurgicos">Processos Metalúrgicos</option>
+                <option value="projetos">Projetos Mecânicos</option>
+                <option value="biomedicos">Sistemas Biomédicos</option>
+            </select>
+        </div>
+    </main>
+
+    <div id="custom-confirm-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <p id="modal-message">Texto da mensagem aqui</p>
+            <div class="modal-buttons">
+                <button id="modal-cancel-btn" class="btn btn-secondary">Cancelar</button>
+                <button id="modal-confirm-btn" class="btn btn-primary">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
