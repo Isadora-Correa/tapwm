@@ -6,7 +6,7 @@ module.exports = function(app) {
         const sqlConfig = {
             server: 'LAPTOP-ISA\\SQLEXPRESS', 
             user: 'BDIsadora', 
-            password: 'Bonecabarbie0102',
+            password: 'xxxxx',
             database: 'master', 
             driver: 'msnodesqlv8',
             options: {
