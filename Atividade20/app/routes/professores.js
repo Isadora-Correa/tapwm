@@ -1,35 +1,28 @@
 module.exports = function(app) {
-    app.get('/informacao/professores', async function(req, res) { // 1. Tornamos a função principal async
-        const sql = require('mssql/msnodesqlv8');
+    app.get('/informacao/professores', async function(req, res) {
+        const sql = require('mssql'); 
 
-        // Configuração da conexão CORRIGIDA
         const sqlConfig = {
-            server: 'LAPTOP-ISA\\SQLEXPRESS', 
-            user: 'BDIsadora', 
-            password: 'xxxxx',
-            database: 'master', 
-            driver: 'msnodesqlv8',
+            server: 'localhost',
+            user: 'BDIsadora',
+            password: 'xxx',
+            database: 'master',
+            port: 50174,
             options: {
                 encrypt: false,
-                trustServerCertificate: true,
+                trustServerCertificate: true
             }
         };
 
         try {
-            // Conecta ao banco de dados
-            const pool = await sql.connect(sqlConfig);
-            
-            // Executa a query
-            const results = await pool.request().query('SELECT * from PROFESSORES');
-            
-            // Envia os resultados como JSON
+            await sql.connect(sqlConfig);
+            const results = await sql.query('SELECT * from PROFESSORES');
             res.json(results.recordset);
-
         } catch (err) {
-            // Se der erro, loga no console E envia uma resposta de erro para o cliente
-            console.error("Erro ao conectar ou consultar o banco de dados:", err);
-            // 5. ENVIE UMA RESPOSTA DE ERRO PARA O NAVEGADOR
+            console.error("Erro detalhado com o novo driver:", err); // O erro aparecerá aqui
             res.status(500).json({ erro: 'Falha ao buscar dados dos professores.' });
+        } finally {
+            await sql.close();
         }
     });
 }
