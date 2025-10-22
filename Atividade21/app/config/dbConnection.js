@@ -7,7 +7,7 @@ const sql = require('mssql');
 const sqlConfig = {
     server: 'localhost', // Servidor
     user: 'BDIsadora', // Usuário
-    password: 'Bonecabarbie0102', // Senha
+    password: 'xxxx', // Senha
     database: 'master', // Banco de dados
     port: 50174, // A porta que estava faltando!
     
