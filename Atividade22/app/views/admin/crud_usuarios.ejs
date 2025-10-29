@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Usuários - Admin</title>
+    <style>
+        table#tabela1 tr td {
+            background: #ffc;
+        }
+        table#tabela1 tr.cabeca td {
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista de Usuários</h1>
+
+    <button style="margin-bottom: 15px; padding: 5px 15px;">
+        <a style="text-decoration: none;" href="/admin/adicionar_usuario">Adicionar Usuário</a> </button>
+
+    <table border="1px" cellpadding="5px" cellspacing="0" ID="tabela1">
+        <tr class="cabeca">
+            <td>Nome</td>
+            <td>E-Mail</td>
+            <td>Operações</td>
+        </tr>
+
+        <% for(let i = 0; i < users.length; i++){ %>
+            <tr>
+                <td><%= users[i].NOME_USUARIO %></td>
+                <td><%= users[i].EMAIL_USUARIO %></td>
+                <td>
+                    <button style="padding: 5px 15px; width: 100%; margin-bottom: 5px;">
+                        <a style="text-decoration: none; color: inherit;"
+                           href="/admin/editar_usuario?id=<%= users[i].ID_USUARIO %>">Editar</a> </button>
+
+                    <form action="/usuario/deletar" method="post"> <input type="hidden" id="id_usuario_<%= i %>" name="id_usuario" value="<%= users[i].ID_USUARIO %>" /> <button style="padding: 5px 15px; width: 100%;" type="submit">Deletar</button>
+                    </form>
+                </td>
+            </tr>
+        <% } %>
+
+    </table>
+</body>
+</html>
